@@ -31,7 +31,9 @@ const ServiceCard = ({ link, image, kicker, title, description, pills, delay = 0
           <div className="card-image-wrapper">
             <img src={image} alt={title} className="card-image" />
             <div className="card-overlay">
-              <ArrowRight size={24} className="card-arrow" />
+              <div className="action-button">
+                <ArrowRight size={24} className="card-arrow" />
+              </div>
             </div>
           </div>
           <div className="card-content inner-element">
@@ -40,7 +42,7 @@ const ServiceCard = ({ link, image, kicker, title, description, pills, delay = 0
             <p>{description}</p>
             <div className="mini-pills">
               {pills.map((pill, idx) => (
-                <span key={idx}>{pill}</span>
+                <span key={idx} style={{ transitionDelay: `${idx * 0.05}s` }}>{pill}</span>
               ))}
             </div>
           </div>

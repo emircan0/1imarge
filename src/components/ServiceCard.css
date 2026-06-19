@@ -3,88 +3,141 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
   background: var(--white);
   border: 1px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 1;
+}
+
+/* Glowing Border Effect */
+.service-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, var(--tile), var(--navy), var(--gold));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 2px;
+}
+
+.service-card:hover::before {
+  opacity: 1;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 20px 40px rgba(7, 24, 39, 0.12), 0 0 40px rgba(8, 123, 146, 0.1);
+  border-color: transparent;
 }
 
 .card-image-wrapper {
   position: relative;
   overflow: hidden;
-  height: 240px;
+  height: 260px;
 }
 
 .card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .service-card:hover .card-image {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(7, 24, 39, 0.8), transparent);
+  background: linear-gradient(to top, rgba(7, 24, 39, 0.85), rgba(7, 24, 39, 0.2));
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 1.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-card:hover .card-overlay {
   opacity: 1;
 }
 
-.card-arrow {
+.action-button {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--white);
-  transform: translateX(-20px);
-  transition: transform 0.4s ease;
+  transform: scale(0.5) translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.service-card:hover .card-arrow {
-  transform: translateX(0);
+.service-card:hover .action-button {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.action-button:hover {
+  background: var(--tile);
+  border-color: var(--tile);
+  transform: scale(1.1) translateY(0);
 }
 
 .card-content {
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
 }
 
 .card-kicker {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--tile);
+  position: absolute;
+  top: -15px;
+  left: 2rem;
+  background: linear-gradient(135deg, var(--gold), #b88d3e);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
+  box-shadow: 0 4px 15px rgba(214, 173, 88, 0.4);
+  z-index: 2;
 }
 
 .card-content h3 {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.45rem;
+  font-weight: 800;
   color: var(--navy);
   margin-bottom: 1rem;
   line-height: 1.3;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .card-content h3 {
+  color: var(--tile);
 }
 
 .card-content p {
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -97,14 +150,19 @@
 
 .mini-pills span {
   font-size: 0.75rem;
-  padding: 0.35rem 0.75rem;
-  background: var(--ivory);
-  color: var(--navy-2);
-  border-radius: 50px;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  padding: 0.4rem 0.85rem;
+  background: var(--paper-2);
+  color: var(--navy);
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .service-card:hover .mini-pills span {
-  background: var(--ivory-2);
+  background: var(--white);
+  border-color: var(--tile);
+  color: var(--tile);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(8, 123, 146, 0.1);
 }
