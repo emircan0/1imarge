@@ -6,6 +6,7 @@ import Home from './pages/Home';
 // We'll add these later
 import About from './pages/About';
 import Services from './pages/Services';
+import ServiceDetail from './pages/ServiceDetail';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/hakkimizda" element={<About />} />
         <Route path="/hizmetler" element={<Services />} />
+        <Route path="/:serviceId" element={<ServiceDetail />} />
         {/* Wildcard for detailed services for now */}
         <Route path="*" element={<Services />} />
       </Routes>

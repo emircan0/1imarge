@@ -94,6 +94,14 @@
   width: 100%;
 }
 
+.primary-nav > a.btn {
+  color: var(--white) !important;
+}
+
+.primary-nav > a.btn:hover {
+  color: var(--white) !important;
+}
+
 .nav-item.has-dropdown {
   position: relative;
   cursor: pointer;

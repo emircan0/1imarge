@@ -131,8 +131,8 @@ ul {
 }
 
 .btn-primary {
-  background: var(--navy);
-  color: var(--white);
+  background: var(--navy) !important;
+  color: var(--white) !important;
   box-shadow: 0 4px 15px rgba(7, 24, 39, 0.2);
 }
 
