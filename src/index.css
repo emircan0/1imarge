@@ -55,12 +55,6 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  cursor: none; /* Custom cursor fallback */
-}
-
-/* Ensure links and buttons hide default cursor */
-a, button, input, textarea {
-  cursor: none !important;
 }
 
 body::before {

@@ -4,15 +4,12 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 // We'll add these later
-import CustomCursor from './components/CustomCursor';
-
-const About = () => <div style={{padding: '120px 20px', minHeight: '60vh'}}><h1>Hakkımızda</h1><p>Yapım aşamasında...</p></div>;
-const Services = () => <div style={{padding: '120px 20px', minHeight: '60vh'}}><h1>Hizmetler</h1><p>Yapım aşamasında...</p></div>;
+import About from './pages/About';
+import Services from './pages/Services';
 
 function App() {
   return (
     <Router>
-      <CustomCursor />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

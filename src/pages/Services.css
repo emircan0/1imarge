@@ -1,0 +1,102 @@
+/* Capability Map */
+.capability-section {
+  padding-bottom: 8rem;
+}
+
+.capability-map {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.capability-group {
+  padding: 2.5rem;
+  border-top: 4px solid var(--tile);
+}
+
+.capability-group span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--tile);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.capability-group h3 {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+}
+
+.capability-group p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.capability-group p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tile);
+  opacity: 0.5;
+}
+
+/* Dark Band - Unified */
+.dark-band {
+  padding: 6rem 0;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.band-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.band-grid h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.band-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.band-list > div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  font-size: 1.05rem;
+  color: var(--ivory-2);
+}
+
+.band-list span {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+@media (max-width: 992px) {
+  .band-grid {
+    grid-template-columns: 1fr;
+  }
+}
