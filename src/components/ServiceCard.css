@@ -1,0 +1,110 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.service-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 24, 39, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.service-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-arrow {
+  color: var(--white);
+  transform: translateX(-20px);
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .card-arrow {
+  transform: translateX(0);
+}
+
+.card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-kicker {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--tile);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.card-content h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.card-content p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.mini-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mini-pills span {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--ivory);
+  color: var(--navy-2);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.service-card:hover .mini-pills span {
+  background: var(--ivory-2);
+}

@@ -1,0 +1,176 @@
+:root {
+  --navy: #071827;
+  --navy-2: #102a45;
+  --black: #04111d;
+  --ink: #16232d;
+  --muted: #68727a;
+  --white: #ffffff;
+  --ivory: #f7f0df;
+  --ivory-2: #efe3cb;
+  --paper: #fffaf0;
+  --paper-2: #f9f0dc;
+  --stone: #d9cab0;
+  --tile: #087b92;
+  --turquoise: #19bfd1;
+  --cobalt: #143f86;
+  --lapis: #0c2364;
+  --gold: #d6ad58;
+  --gold-2: #f0d98e;
+  --clay: #9c4936;
+
+  --line: rgba(28, 40, 48, 0.18);
+  --line-dark: rgba(255, 255, 255, 0.18);
+  --shadow: 0 26px 72px rgba(7, 24, 39, 0.17);
+  --shadow-strong: 0 34px 96px rgba(5, 17, 30, 0.28);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --container: 1280px;
+
+  /* Modern Glassmorphic Colors */
+  --glass-bg: rgba(255, 250, 240, 0.7); /* paper with opacity */
+  --glass-bg-dark: rgba(7, 24, 39, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(135deg, rgba(12, 35, 100, 0.04) 25%, transparent 25%) 0 0 / 42px 42px,
+    linear-gradient(225deg, rgba(8, 123, 146, 0.05) 25%, transparent 25%) 0 0 / 42px 42px,
+    linear-gradient(90deg, rgba(156, 73, 54, 0.06) 1px, transparent 1px) 0 0 / 84px 84px,
+    linear-gradient(180deg, rgba(214, 173, 88, 0.08) 1px, transparent 1px) 0 0 / 84px 84px,
+    var(--ivory);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none; /* Custom cursor fallback */
+}
+
+/* Ensure links and buttons hide default cursor */
+a, button, input, textarea {
+  cursor: none !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    url("/assets/images/design-bg-1.png") center top / 620px auto repeat,
+    url("/assets/images/seljuk-motif.png") calc(100% + 80px) 130px / 560px auto no-repeat,
+    url("/assets/images/seljuk-motif.png") -180px calc(100% + 80px) / 480px auto no-repeat;
+  opacity: 0.13;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    repeating-conic-gradient(from 45deg, rgba(8, 123, 146, 0.035) 0deg 8deg, transparent 8deg 45deg) 0 0 / 120px 120px,
+    linear-gradient(180deg, rgba(255, 250, 240, 0.4), rgba(239, 227, 203, 0.6));
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.07);
+  border-radius: var(--radius-lg);
+}
+
+.glass-panel-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: var(--white);
+  border-radius: var(--radius-lg);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.75rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(7, 24, 39, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--tile);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(8, 123, 146, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--tile);
+  margin-bottom: 0.5rem;
+}
+
+/* Text Gradients */
+.text-gradient {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--tile) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
