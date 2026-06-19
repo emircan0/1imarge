@@ -23,8 +23,8 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(255, 250, 240, 0.95) 0%,
-    rgba(255, 250, 240, 0.8) 40%,
+    rgba(7, 24, 39, 0.95) 0%,
+    rgba(7, 24, 39, 0.8) 40%,
     rgba(7, 24, 39, 0.1) 100%
   );
   backdrop-filter: blur(4px);
@@ -49,14 +49,14 @@
 .hero-subtitle {
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 300;
-  color: var(--navy-2);
+  color: var(--ivory);
   margin-bottom: 2rem;
 }
 
 .hero-lead {
   font-size: 1.125rem;
   line-height: 1.8;
-  color: var(--ink);
+  color: var(--white);
   max-width: 600px;
   margin-bottom: 3rem;
 }
@@ -83,7 +83,7 @@
 .metric-item strong {
   font-size: 1.75rem;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1;
   margin-bottom: 0.25rem;
 }

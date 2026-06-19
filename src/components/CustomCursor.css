@@ -4,7 +4,7 @@
   left: 0;
   width: 8px;
   height: 8px;
-  background-color: var(--navy);
+  background-color: var(--paper);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;

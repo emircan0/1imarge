@@ -5,8 +5,8 @@
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
-  background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
   z-index: 1;
 }
@@ -124,7 +124,7 @@
 .card-content h3 {
   font-size: 1.45rem;
   font-weight: 800;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 1rem;
   line-height: 1.3;
   transition: color 0.3s ease;
@@ -152,7 +152,7 @@
   font-size: 0.75rem;
   padding: 0.4rem 0.85rem;
   background: var(--paper-2);
-  color: var(--navy);
+  color: var(--white);
   border-radius: 6px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -160,7 +160,7 @@
 }
 
 .service-card:hover .mini-pills span {
-  background: var(--white);
+  background: var(--paper);
   border-color: var(--tile);
   color: var(--tile);
   transform: translateY(-2px);

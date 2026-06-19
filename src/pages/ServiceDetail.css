@@ -56,7 +56,7 @@
 .solution-spec strong {
   display: block;
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
@@ -68,8 +68,8 @@
 
 .spec-pills span {
   padding: 0.75rem 1rem;
-  background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius);
   font-size: 0.95rem;
   font-weight: 500;
@@ -86,7 +86,7 @@
 
 .detail-copy h2 {
   font-size: 2.25rem;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
@@ -103,7 +103,7 @@
 
 .outcome-panel h3 {
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
@@ -117,7 +117,7 @@
   padding-left: 1.5rem;
   position: relative;
   font-size: 1.05rem;
-  color: var(--ink);
+  color: var(--white);
 }
 
 .outcome-panel li::before {
@@ -165,7 +165,7 @@
 
 .detail-visual-card h3 {
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 0.75rem;
 }
 
@@ -197,7 +197,7 @@
 .method-step p {
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--ink);
+  color: var(--white);
 }
 
 /* Related */
@@ -211,7 +211,7 @@
 .related-grid h2 {
   font-size: 2rem;
   line-height: 1.2;
-  color: var(--navy);
+  color: var(--white);
 }
 
 .related-links {
@@ -225,7 +225,7 @@
   padding: 1.5rem 2rem;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;

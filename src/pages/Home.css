@@ -12,13 +12,13 @@
 .section-head h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
-  color: var(--navy);
+  color: var(--white);
   line-height: 1.2;
 }
 
 /* Intro Band */
 .intro-band {
-  background: var(--white);
+  background: var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -33,7 +33,7 @@
 .intro-grid h2 {
   font-size: clamp(2rem, 4vw, 2.75rem);
   line-height: 1.2;
-  color: var(--navy);
+  color: var(--white);
 }
 
 .intro-lead {
@@ -83,7 +83,7 @@
 .system-copy h2 {
   font-size: 2.25rem;
   line-height: 1.2;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 3rem;
 }
 
@@ -102,7 +102,7 @@
 .step-num {
   font-size: 1.5rem;
   font-weight: 800;
-  background: var(--ivory);
+  background: var(--paper-2);
   width: 48px;
   height: 48px;
   display: flex;
@@ -114,7 +114,7 @@
 
 .step-item h3 {
   font-size: 1.25rem;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 0.5rem;
 }
 
@@ -138,7 +138,7 @@
 .contact-copy h2 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.1;
-  color: var(--navy);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
