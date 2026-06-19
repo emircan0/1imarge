@@ -52,7 +52,22 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Background shapes removed completely */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--white);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    url("/assets/images/design-bg-1.png") center top / 620px auto repeat,
+    url("/assets/images/seljuk-motif.png") calc(100% + 80px) 130px / 560px auto no-repeat,
+    url("/assets/images/seljuk-motif.png") -180px calc(100% + 80px) / 480px auto no-repeat;
+  opacity: 0.04; /* Very subtle motif overlay */
+}
 
 a {
   text-decoration: none;
@@ -137,7 +152,7 @@ ul {
 
 /* Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--tile) 100%);
+  background: linear-gradient(135deg, var(--white) 0%, var(--tile) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
